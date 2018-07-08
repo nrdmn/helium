@@ -16,7 +16,7 @@ struct {
 		uint16_t flags;
 		uint32_t length;
 	} end_tag __attribute__((aligned(8)));
-} multiboot2_header __attribute__((section(".multiboot2"), aligned(8))) = {
+} multiboot2_header __attribute__((section(".multiboot"), aligned(8))) = {
 	.magic = 0xe85250d6,
 	.architecture = 0,
 	.header_length = sizeof(multiboot2_header),

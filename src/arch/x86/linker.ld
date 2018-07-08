@@ -3,8 +3,9 @@ ENTRY(_start)
 SECTIONS {
 	. = 1M;
 
-	.multiboot2 ALIGN (4K) :
+	.multiboot ALIGN (4K) :
 	{
+		*(.multiboot)
 		*(.multiboot2)
 	}
 
