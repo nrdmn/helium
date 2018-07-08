@@ -5,7 +5,7 @@ export ARCH
 
 ifeq ($(ARCH),x86)
 ASFLAGS=--32
-CFLAGS=-m32
+CFLAGS=-m32 -nostdlib -nostdinc
 LDFLAGS=-melf_i386
 endif
 export ASFLAGS

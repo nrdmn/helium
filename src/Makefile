@@ -10,7 +10,7 @@ all: main.o
 	$(LD) $(LDFLAGS) -n -o kernel -T arch/$(ARCH)/linker.ld arch/$(ARCH)/*.o main.o
 
 main.o: main.c
-	$(CC) $(CFLAGS) -I ../include -nostdlib -nostdinc -c -o main.o main.c
+	$(CC) $(CFLAGS) -I ../include -c -o main.o main.c
 
 clean:
 	$(MAKE) -C arch/$(ARCH) clean
