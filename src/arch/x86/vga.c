@@ -12,7 +12,7 @@ static void memset(char *dst, char c, size_t n)
 		dst[n] = c;
 }
 
-static char *vga_buf = 0xb8000;
+static char *vga_buf = (char *)0xb8000;
 
 static struct vga_cursor vga_cursor;
 
