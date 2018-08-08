@@ -1,7 +1,7 @@
 #ifndef VGA_H
 #define VGA_H
 
-#include <arch/x86/types.h>
+#include <types.h>
 
 static char *vga_buf;
 

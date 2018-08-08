@@ -14,7 +14,7 @@ all:
 	$(AS) $(ASFLAGS) -o $@ $<
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I ../../../include -c -o $@ $<
+	$(CC) $(CFLAGS) -D ARCH_TYPES=\"arch/$(ARCH)/types.h\" -I ../../../include -c -o $@ $<
 
 clean:
 	rm -f *.o

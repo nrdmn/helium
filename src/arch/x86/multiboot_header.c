@@ -1,4 +1,4 @@
-#include <arch/x86/types.h>
+#include <types.h>
 
 struct {
 	uint32_t magic;
