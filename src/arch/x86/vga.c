@@ -1,5 +1,7 @@
 #include "vga.h"
 
+#include <types.h>
+
 static void memcpy(char *dst, const char *src, size_t n)
 {
 	while (n-- > 0)
@@ -12,9 +14,13 @@ static void memset(char *dst, char c, size_t n)
 		dst[n] = c;
 }
 
-static char *vga_buf = (char *)0xb8000;
+extern uint8_t vga_buf[4000];
 
-static struct vga_cursor vga_cursor;
+static struct {
+	uint8_t x;
+	uint8_t y;
+	uint8_t color;
+} vga_cursor;
 
 void vga_clear()
 {
