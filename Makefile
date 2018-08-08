@@ -1,4 +1,4 @@
-.PHONY: kernel clean
+.PHONY: kernel clean qemu-x86_64
 
 ARCH?=x86
 export ARCH
@@ -17,3 +17,6 @@ kernel:
 
 clean:
 	$(MAKE) -C src clean
+
+qemu-x86_64: kernel
+	qemu-system-x86_64 -curses -kernel src/kernel
