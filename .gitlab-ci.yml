@@ -1,0 +1,3 @@
+build:
+  image: registry.git.rwth-aachen.de/ne/helium/helium-build
+  script: make
