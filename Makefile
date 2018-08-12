@@ -5,7 +5,7 @@ export ARCH
 
 ifeq ($(ARCH),x86)
 ASFLAGS=--32
-CFLAGS=-m32 -nostdlib -nostdinc
+CFLAGS=-m32 -nostdlib -nostdinc -fno-asynchronous-unwind-tables -fno-pic
 LDFLAGS=-melf_i386
 endif
 export ASFLAGS
