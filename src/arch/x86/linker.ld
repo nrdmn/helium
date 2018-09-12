@@ -5,6 +5,8 @@ SECTIONS {
 
 	. = 1M;
 
+	__start_kernel = .;
+
 	.multiboot ALIGN (4K) :
 	{
 		*(.multiboot)
@@ -30,4 +32,6 @@ SECTIONS {
 	{
 		*(.comment)
 	}
+
+	__end_kernel = .;
 }
